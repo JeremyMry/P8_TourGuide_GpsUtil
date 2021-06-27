@@ -9,4 +9,12 @@ public class Location {
         this.longitude = longitude;
         this.latitude = latitude;
     }
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "longitude=" + longitude +
+                ", latitude=" + latitude +
+                '}';
+    }
 }

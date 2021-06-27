@@ -35,6 +35,12 @@
 			<version>30.1.1-jre</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.jsoniter</groupId>
+			<artifactId>jsoniter</artifactId>
+			<version>0.9.23</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

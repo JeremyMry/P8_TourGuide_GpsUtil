@@ -4,6 +4,7 @@ import com.google.common.util.concurrent.RateLimiter;
 import com.tourguide.gpsUtil.model.Attraction;
 import com.tourguide.gpsUtil.model.Location;
 import com.tourguide.gpsUtil.model.VisitedLocation;
+import org.checkerframework.checker.units.qual.A;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -65,7 +66,7 @@ public class GpsUtilService {
     }
 
     public boolean nearAttraction(VisitedLocation visitedLocation, Attraction attraction) {
-        return !(getDistance(attraction, visitedLocation.location) > proximityBuffer);
+        return !(getDistance(visitedLocation.getLocation(), attraction) > proximityBuffer);
     }
 
     public double getDistance(Location loc1, Location loc2) {
