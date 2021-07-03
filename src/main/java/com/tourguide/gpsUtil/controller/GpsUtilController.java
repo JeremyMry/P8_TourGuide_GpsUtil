@@ -29,6 +29,7 @@ public class GpsUtilController {
         return gpsUtilService.getAttraction();
     }
 
+    /**
     @GetMapping("/isWithinAttractionProximity")
     public Boolean isWithinAttractionProximityServer(@RequestParam Attraction attraction, Location location) {
         return gpsUtilService.isWithinAttractionProximity(attraction, location);
@@ -42,5 +43,5 @@ public class GpsUtilController {
     @GetMapping("/getDistance")
     public double getDistanceServer(@RequestParam Location loc1, Location loc2) {
         return gpsUtilService.getDistance(loc1, loc2);
-    }
+    }**/
 }
