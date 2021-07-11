@@ -5,6 +5,8 @@ import com.tourguide.gpsUtil.model.Attraction;
 import com.tourguide.gpsUtil.model.Location;
 import com.tourguide.gpsUtil.model.VisitedLocation;
 import org.checkerframework.checker.units.qual.A;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -13,6 +15,10 @@ import java.util.concurrent.TimeUnit;
 
 @Service
 public class GpsUtilService {
+
+
+    private Logger logger = LoggerFactory.getLogger(GpsUtilService.class);
+
 
     public static final RateLimiter rateLimiter = RateLimiter.create(1000.0);
     private static final double STATUTE_MILES_PER_NAUTICAL_MILE = 1.15077945;
