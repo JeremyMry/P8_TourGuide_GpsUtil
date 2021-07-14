@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.swing.*;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,20 +27,4 @@ public class GpsUtilController {
     public List<Attraction> getAllAttractionsServer() {
         return gpsUtilService.getAttraction();
     }
-
-    /**
-    @GetMapping("/isWithinAttractionProximity")
-    public Boolean isWithinAttractionProximityServer(@RequestParam Attraction attraction, Location location) {
-        return gpsUtilService.isWithinAttractionProximity(attraction, location);
-    }
-
-    @GetMapping("/isNearAttraction")
-    public boolean nearAttractionServer(@RequestParam VisitedLocation visitedLocation, Attraction attraction) {
-        return gpsUtilService.nearAttraction(visitedLocation, attraction);
-    }
-
-    @GetMapping("/getDistance")
-    public double getDistanceServer(@RequestParam Location loc1, Location loc2) {
-        return gpsUtilService.getDistance(loc1, loc2);
-    }**/
 }
