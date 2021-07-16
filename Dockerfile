@@ -1,5 +1,5 @@
 FROM openjdk:11
-RUN mkdir /app
-COPY ./out/artifacts/gpsUtil_jar/gpsUtil.jar /app/gpsUtil.jar
-WORKDIR /app
-CMD "java" "-jar" "gpsUtil.jar"
+WORKDIR /out/artifacts/gpsUtil_jar
+ADD gpsUtil.jar gpsUtil.jar
+EXPOSE 8081
+CMD java -jar gpsUtil.jar

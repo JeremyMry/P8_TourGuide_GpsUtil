@@ -4,7 +4,6 @@ import com.google.common.util.concurrent.RateLimiter;
 import com.tourguide.gpsUtil.model.Attraction;
 import com.tourguide.gpsUtil.model.Location;
 import com.tourguide.gpsUtil.model.VisitedLocation;
-import org.checkerframework.checker.units.qual.A;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
